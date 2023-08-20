@@ -1,5 +1,4 @@
-
-const io = require("socket.io")
+const io = require("socket.io");
 
 const socketServer = new io.Server(3000, {
   cors: {

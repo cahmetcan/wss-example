@@ -10,13 +10,113 @@
 </head>
 
 <body>
-    messages:
-    <div id="messages"></div>
+    <div id="main">
 
-    <form action="" id="form">
-        <input type="text" id="input"/>
-        <button type="submit" id="button">Send</button>
-    </form>
+        messages:
+        <div id="messages"></div>
+
+        <form action="" id="form">
+            <input type="text" id="input" />
+            <button type="submit" id="button">Send</button>
+        </form>
+        users:
+        <div id="users"></div>
+
+    </div>
+
+    <style>
+        /* Set the background color of the body to a dark gray */
+        body {
+            background-color: #1a1a1a;
+            color: #f2f2f2;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Center the main content container and give it a max width */
+        #main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Style the messages container */
+        #messages {
+            height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #333;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #222;
+            color: #f2f2f2;
+            font-size: 16px;
+            line-height: 1.5;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Style the form container */
+        #form {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        /* Style the input field */
+        #input {
+            flex-grow: 1;
+            padding: 10px;
+            border: none;
+            background-color: #333;
+            color: #f2f2f2;
+            font-size: 16px;
+            line-height: 1.5;
+            border-radius: 5px 0 0 5px;
+        }
+
+        /* Style the submit button */
+        #button {
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: #f2f2f2;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 1.5;
+            border-radius: 0 5px 5px 0;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        /* Change the background color of the submit button on hover */
+        #button:hover {
+            background-color: #3e8e41;
+        }
+
+        /* Style the users container */
+        #users {
+            background-color: #333;
+            color: #f2f2f2;
+            padding: 10px;
+            font-size: 16px;
+            line-height: 1.5;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Style the scrollbar */
+        #messages::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        #messages::-webkit-scrollbar-track {
+            background-color: #333;
+        }
+
+        #messages::-webkit-scrollbar-thumb {
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+    </style>
 </body>
 
 </html>

@@ -1,4 +1,5 @@
-import io from "socket.io";
+
+const io = require("socket.io")
 
 const socketServer = new io.Server(3000, {
   cors: {
@@ -7,9 +8,10 @@ const socketServer = new io.Server(3000, {
   },
 });
 
-const users: { [key: string]: any } = {};
+const users = {};
 
 socketServer.on("connection", (socket) => {
+  console.log("New user connected");
   socket.on("disconnect", () => {
     socket.broadcast.emit("user-disconnected", users[socket.id]);
     delete users[socket.id];
